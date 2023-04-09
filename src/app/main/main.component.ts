@@ -1,5 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
+import * as AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 @Component({
   selector: 'app-main',
@@ -14,7 +16,7 @@ export class MainComponent implements OnInit {
   constructor (@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
-
+    AOS.init();
     const W = window.innerWidth;
     const H = window.innerHeight
 
